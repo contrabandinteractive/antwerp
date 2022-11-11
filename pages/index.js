@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React, { useState } from "react";
 import Image from 'next/image';
-import { initContract, login, logout, mintMyNFT, getTheNFT } from './utils'
+import { initContract, login, logout, mintMyNFT, getTheNFT } from './components/utils'
 //import MintingTool from "./Components/MintingTool";
 //import InfoBubble from "./Components/InfoBubble";
 const BN = require("bn.js");
