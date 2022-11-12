@@ -83,11 +83,20 @@ async function storeWithProgress (files) {
     //
     let streamP = await getObject(process.env.s3_bucket, files+'.png');
     */
-      
-    const tempFile = new fs.writeFile('/tmp/'+files+'.png', streamP, () => 
-    console.log('finished creating file!'))
 
-    const thefiles = await getFilesFromPath('/tmp'); 
+    const dir = '/tmp/'+files
+    fs.mkdir(dir, err => {
+    if (err) {
+        throw err
+    }
+        const files = fs.writeFile(dir+'/art.png', streamP, () => 
+        console.log('finished downloading!'));
+    })
+      
+    //const tempFile = new fs.writeFile('/tmp/'+files+'.png', streamP, () => 
+    //console.log('finished creating file!'))
+
+    const thefiles = await getFilesFromPath('/tmp/'+files); 
 
     const cid = await client.put(thefiles);
     

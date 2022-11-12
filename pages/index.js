@@ -83,7 +83,7 @@ export default function Home(props) {
     const uploadResult = await uploadResponse.json()
 
     console.log('uploadResult '+uploadResult);
-    setImageUrl('/images/'+folderID+'/art.png');
+    setImageUrl('https://'+uploadResult.cid+'.ipfs.w3s.link/'+folderID+'/art.png');
     setTheProgress(4);
     setNftUrl('https://'+uploadResult.cid+'.ipfs.w3s.link/'+folderID+'/art.png');
     
