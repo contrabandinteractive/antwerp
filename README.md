@@ -11,13 +11,21 @@ You must also add your own .env.local file to the project directory. It should c
 More info on this here: https://nextjs.org/docs/basic-features/environment-variables
 
 Your file should look like this:
+
 web3storage_key=XXXXXX
+
 openai_key=XXXXXX
+
 near_env=development
+
 s3_access_key=XXXXXX
+
 s3_secret=XXXXXX
+
 s3_region=us-east-2
+
 s3_bucket=XXXXXX
+
 
 ## Inspiration
 
